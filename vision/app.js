@@ -1,4 +1,4 @@
-// Configuración desde config.js (que lee del .env)
+// Configuración desde config.js
 const endpoint = config.computerVision.endpoint;
 const apiKey = config.computerVision.apiKey;
 
