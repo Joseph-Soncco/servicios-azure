@@ -1,91 +1,57 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: #f5f5f5;
+    min-height: 100vh;
 }
 
-.upload-area {
-    cursor: pointer;
-    transition: all 0.2s;
-    min-height: 200px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+main {
+    background: transparent;
 }
 
-.upload-area:hover {
-    background-color: #f8f9ff !important;
-    border-color: #764ba2 !important;
-}
-
-#imageContainer {
-    min-height: 200px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#imagePreview {
-    max-height: 400px;
-    width: auto;
-}
-
-.result-item {
+.card {
     background: white;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    flex: 0 0 calc(20% - 16px);
-    min-width: 220px;
-    max-height: 280px;
-    overflow-y: auto;
-    font-size: 0.9rem;
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+}
+
+.result-card {
+    background: #f8f9fa;
+    border-left: 4px solid #667eea;
+    transition: all 0.2s;
+}
+
+.result-card:hover {
+    background: #e9ecef;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+#imageContainer img {
+    transition: transform 0.3s;
+}
+
+#imageContainer img:hover {
+    transform: scale(1.02);
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     border: none;
+    transition: all 0.3s;
 }
 
-.result-item strong {
-    color: #667eea;
-    font-size: 0.9rem;
-    display: block;
-    margin-bottom: 8px;
-    font-weight: 600;
+.btn-primary:hover {
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
 }
 
-.loading {
-    display: none;
+.form-control:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
 }
 
-.loading:not(.d-none) {
-    display: block;
-}
-
-#loading {
-    position: relative;
-}
-
-.spinner-border {
-    width: 3rem;
-    height: 3rem;
-}
-
-.error {
-    background: #fff5f5;
-    color: #c53030;
-    padding: 15px;
-    border-radius: 8px;
-    margin-bottom: 20px;
-}
-
-.success {
-    background: #f0fff4;
-    color: #22543d;
-    padding: 15px;
-    border-radius: 8px;
-    margin-bottom: 20px;
+.navbar-brand {
+    font-size: 1.25rem;
 }
