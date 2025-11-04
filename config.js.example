@@ -1,0 +1,20 @@
+// Configuración de Azure Services - ARCHIVO DE EJEMPLO
+// Copia este archivo como config.js y reemplaza los valores con tus credenciales reales
+// En un entorno de producción, estas variables deberían estar en variables de entorno del servidor
+
+// Para desarrollo local, simulamos la lectura del .env
+// Nota: Los navegadores no pueden leer archivos .env directamente
+// En producción, estas variables se cargarían desde el servidor o Azure Key Vault
+
+const config = {
+    computerVision: {
+        // Cambia este endpoint por el de tu recurso de Azure Computer Vision
+        endpoint: 'https://TU-RECURSO.cognitiveservices.azure.com/',
+        // Cambia esta clave por una de las claves de tu recurso de Azure Computer Vision
+        apiKey: 'TU_API_KEY_AQUI'
+    }
+};
+
+// Exportar para uso global
+window.config = config;
+

@@ -1,0 +1,14 @@
+# Archivos de configuración con credenciales
+config.js
+.env
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Node modules (si se usa en el futuro)
+node_modules/
+
