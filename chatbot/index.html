@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bot Mágico - Chat</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold" href="../index.html">
+        <span class="me-2">🧙</span>Bot Mágico
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../vision/index.html">Computer Vision</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../traductor/index.html">Translator</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">Chatbot</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div id="error-message" class="error-message"></div>
+  <div id="webchat" role="main"></div>
+
+  <!-- Bot Framework Web Chat SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../config.js"></script>
+  <script crossorigin="anonymous" src="https://cdn.botframework.com/botframework-webchat/latest/webchat.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

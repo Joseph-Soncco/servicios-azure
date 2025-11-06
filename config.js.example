@@ -12,6 +12,23 @@ const config = {
         endpoint: 'https://TU-RECURSO.cognitiveservices.azure.com/',
         // Cambia esta clave por una de las claves de tu recurso de Azure Computer Vision
         apiKey: 'TU_API_KEY_AQUI'
+    },
+    translator: {
+        // Clave de API de Azure Translator (puedes usar cualquiera de las dos claves)
+        // Encuéntrala en: Azure Portal > Tu recurso Translator > Claves y punto de conexión
+        key: 'TU_TRANSLATOR_KEY_AQUI',
+        // Endpoint del servicio de traducción de texto
+        endpoint: 'https://api.cognitive.microsofttranslator.com',
+        // Ubicación/región del recurso (ej: southcentralus, eastus, westeurope)
+        // Encuéntrala en: Azure Portal > Tu recurso Translator > Claves y punto de conexión
+        location: 'TU_LOCATION_AQUI'
+    },
+    chatbot: {
+        // Secret key del bot de Azure (Web Chat)
+        // Encuéntralo en: Azure Portal > Tu Bot > Canales > Web Chat > Default Site > Secret keys
+        secretKey: 'TU_CHATBOT_SECRET_KEY_AQUI',
+        // Nombre del bot en Azure
+        botName: 'TU_BOT_NAME_AQUI'
     }
 };
 

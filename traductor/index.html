@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Azure Translator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="../index.html">
+                <span class="me-2">🌐</span>Azure Translator
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../vision/index.html">Computer Vision</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Translator</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../chatbot/index.html">Chatbot</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container-fluid p-4">
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <div class="card shadow-sm border-0 mb-4">
+                    <div class="card-body p-4">
+                        <h4 class="card-title text-primary mb-4">📝 Traducir Texto</h4>
+                        
+                        <div class="row mb-3">
+                            <div class="col-md-5">
+                                <label class="form-label fw-semibold">Idioma de origen</label>
+                                <select id="fromLanguage" class="form-select form-select-lg">
+                                    <option value="auto">Detectar automáticamente</option>
+                                    <option value="es">Español</option>
+                                    <option value="en">Inglés</option>
+                                    <option value="fr">Francés</option>
+                                    <option value="de">Alemán</option>
+                                    <option value="it">Italiano</option>
+                                    <option value="pt">Portugués</option>
+                                    <option value="ru">Ruso</option>
+                                    <option value="ja">Japonés</option>
+                                    <option value="zh">Chino</option>
+                                    <option value="ko">Coreano</option>
+                                    <option value="ar">Árabe</option>
+                                </select>
+                            </div>
+                            <div class="col-md-2 text-center d-flex align-items-end justify-content-center">
+                                <button class="btn btn-outline-secondary btn-lg" id="swapLanguages" title="Intercambiar idiomas">
+                                    ⇄
+                                </button>
+                            </div>
+                            <div class="col-md-5">
+                                <label class="form-label fw-semibold">Idioma de destino</label>
+                                <select id="toLanguage" class="form-select form-select-lg">
+                                    <option value="es">Español</option>
+                                    <option value="en" selected>Inglés</option>
+                                    <option value="fr">Francés</option>
+                                    <option value="de">Alemán</option>
+                                    <option value="it">Italiano</option>
+                                    <option value="pt">Portugués</option>
+                                    <option value="ru">Ruso</option>
+                                    <option value="ja">Japonés</option>
+                                    <option value="zh">Chino</option>
+                                    <option value="ko">Coreano</option>
+                                    <option value="ar">Árabe</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label fw-semibold">Texto a traducir</label>
+                            <textarea 
+                                id="textInput" 
+                                class="form-control form-control-lg" 
+                                rows="6" 
+                                placeholder="Escribe o pega el texto que deseas traducir aquí..."
+                                maxlength="5000"
+                            ></textarea>
+                            <small class="text-muted">
+                                <span id="charCount">0</span>/5000 caracteres
+                            </small>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="loading" class="card shadow-sm border-0 mb-4 d-none">
+                    <div class="card-body p-4 text-center">
+                        <div class="spinner-border text-primary mb-3" role="status" style="width: 3rem; height: 3rem;">
+                            <span class="visually-hidden">Traduciendo...</span>
+                        </div>
+                        <p class="mb-0 fw-semibold text-primary">Traduciendo texto...</p>
+                    </div>
+                </div>
+
+                <div id="errorMessage"></div>
+
+                <div id="results" class="card shadow-sm border-0 d-none">
+                    <div class="card-body p-4">
+                        <h5 class="text-primary mb-4">✨ Traducción</h5>
+                        <div id="resultsContent"></div>
+                        
+                        <div class="mt-4">
+                            <button class="btn btn-outline-secondary btn-sm" id="btnLimpiar">
+                                🗑️ Limpiar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../config.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
+

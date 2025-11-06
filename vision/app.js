@@ -19,8 +19,6 @@ document.getElementById('btnAnalizar').onclick = async () => {
     
     try {
         const endpointUrl = endpoint.replace(/\/$/, '');
-        const features = ['Caption', 'Tags', 'Objects', 'People', 'Read'];
-        const featuresParam = features.join(',');
         const apiUrl = `${endpointUrl}/vision/v3.2/analyze?visualFeatures=Categories,Description,Color,Objects,Tags,Faces&details=Landmarks&language=en`;
         
         let headers = { 'Ocp-Apim-Subscription-Key': apiKey };

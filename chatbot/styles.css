@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+#webchat {
+  flex: 1;
+  height: calc(100vh - 56px);
+  width: 100%;
+}
+
+.error-message {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 4px;
+  border: 1px solid #f5c6cb;
+  display: none;
+}
+
