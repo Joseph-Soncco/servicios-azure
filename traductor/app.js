@@ -70,6 +70,8 @@ obtenerElemento('swapLanguages').addEventListener('click', function() {
     selectDestino.value = valorOrigen;
 });
 
+obtenerElemento('btnTraducir').addEventListener('click', traducir);
+
 async function traducir() {
     const texto = obtenerElemento('textInput').value.trim();
     const idiomaOrigen = obtenerElemento('fromLanguage').value;
@@ -84,6 +86,11 @@ async function traducir() {
         mostrarError('El idioma de origen y destino no pueden ser iguales');
         return;
     }
+    
+    const spinner = obtenerElemento('spinner');
+    const btnTraducir = obtenerElemento('btnTraducir');
+    spinner.classList.remove('d-none');
+    btnTraducir.disabled = true;
     
     obtenerElemento('loading').classList.remove('d-none');
     obtenerElemento('errorMessage').innerHTML = '';
@@ -151,6 +158,8 @@ async function traducir() {
     } catch (error) {
         mostrarError(error.message);
     } finally {
+        spinner.classList.add('d-none');
+        btnTraducir.disabled = false;
         obtenerElemento('loading').classList.add('d-none');
     }
 }
