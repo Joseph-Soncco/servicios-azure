@@ -168,6 +168,20 @@ servicios-azure/
 3. Presiona Enter o el botón de enviar
 4. Espera la respuesta del bot
 
+**Ejemplos de preguntas que puedes hacerle al bot:**
+- ¿Quién es el protagonista de la saga?
+- ¿Quién es el director de Hogwarts?
+- ¿En qué casa está Harry?
+- ¿Qué hechizo enciende la punta de la varita?
+- ¿Qué hechizo hace que los objetos leviten?
+- ¿Qué deporte juegan los magos en el aire?
+- ¿Quién es el guardabosques de Hogwarts?
+- ¿Qué objeto decide en qué casa irá cada estudiante?
+- ¿Qué ave mágica renace de sus cenizas?
+- ¿Qué objeto permite volverse invisible?
+- ¿Dónde se guarda el dinero de los magos?
+- ¿Qué criatura gigante vive en la Cámara de los Secretos?
+
 ## ⚠️ Seguridad Importante
 
 ### ⚡ NO SUBAS EL ARCHIVO `config.js` A GIT
